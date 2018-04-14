@@ -1,0 +1,25 @@
+﻿body {
+}
+
+.centrar-pagina {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+.espacio-vertical {
+    margin-top: 20px;
+        
+
+}
+
+.cuadro-botones-menu {
+
+
+}
