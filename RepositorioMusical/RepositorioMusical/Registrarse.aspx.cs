@@ -13,11 +13,14 @@ namespace RepositorioMusical
     {
 
         RepositorioMusical.Clases.Insercion miInsert; // Declaro una variable de tipo Insercion
+        RepositorioMusical.Clases.Consultas miConsulta; // Declaro una variable de tipo Consultas 
 
 
         protected void Page_Load(object sender, EventArgs e)
         {
             miInsert = new RepositorioMusical.Clases.Insercion(); // Inicializo la variable miInsert
+            miConsulta = new RepositorioMusical.Clases.Consultas();
+
         }
 
         protected void CrearCuenta_Click(object sender, EventArgs e)
@@ -34,11 +37,28 @@ namespace RepositorioMusical
 
             if (Contraseña.Text != ContraseñaVerificacion.Text) {
 
-                Mensaje.Text = "lAS CONTRASE;AS NO COINCIDEN";
+                Mensaje.Text = "Las contraseñas no coinciden";
             }
-            else { 
+            else {
 
-            miInsert.insertarUsuario( Nombre.Text, apellido.Text, NomUser.Text, FechaNac.Text, Contraseña.Text, CorreoElect.Text );  // Cuando se presiona el boton se hara el insert
+                // Inserta los datos del usuario nuevo en la tabla: USUARIO
+                miInsert.insertarUsuario(Nombre.Text, apellido.Text, NomUser.Text, FechaNac.Text, Contraseña.Text, CorreoElect.Text);  // Cuando se presiona el boton se hara el insert
+
+                // Inserta el estado actual del Usuario recien creado a la base de datos en la tabla : USUARIO_ESTADO
+
+                miInsert.insertarUsuarioActivo((miConsulta.retornarIdUser(CorreoElect.Text, Contraseña.Text)));
+
+                // Limpia todos los campos 
+                limpiarCampos(Nombre);
+                limpiarCampos(apellido);
+                limpiarCampos(NomUser);
+                limpiarCampos(FechaNac);
+                limpiarCampos(CorreoElect);
+                limpiarCampos(Contraseña);
+                limpiarCampos(ContraseñaVerificacion);
+
+           
+
 
             }
         }
@@ -56,6 +76,11 @@ namespace RepositorioMusical
                 mensaje.Text = "Debe ingresar datos en el campo vacio";
             }
 
+        }
+
+
+        private void limpiarCampos(TextBox entrada) {
+            entrada.Text = "";
         }
     }
 }

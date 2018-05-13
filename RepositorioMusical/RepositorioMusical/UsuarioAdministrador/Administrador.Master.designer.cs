@@ -40,21 +40,21 @@ namespace RepositorioMusical.UsuarioAdministrador {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// RegistraArtista control.
+        /// LOGOut control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button RegistraArtista;
+        protected global::System.Web.UI.WebControls.Button LOGOut;
         
         /// <summary>
-        /// Body control.
+        /// body control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder Body;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder body;
     }
 }

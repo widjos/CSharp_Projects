@@ -76,7 +76,7 @@
                     </div>
                     <label class="col-xl-11">Contraseña</label>
                     <div class="col-11">
-                        <asp:TextBox ID="Contraseña" runat="server" class="form-control" placeholder="Contraseña"></asp:TextBox>
+                        <asp:TextBox ID="Contraseña" runat="server" class="form-control" placeholder="Contraseña" TextMode="Password"></asp:TextBox>
                     </div>
                     <label class="col-xl-11">Verificacion de Contraseña</label>
                     <div class="col-11">

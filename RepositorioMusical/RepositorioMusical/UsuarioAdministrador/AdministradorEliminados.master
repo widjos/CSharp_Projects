@@ -1,0 +1,26 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/UsuarioAdministrador/Administrador.Master" AutoEventWireup="true" CodeBehind="AdministradorEliminados.master.cs" Inherits="RepositorioMusical.UsuarioAdministrador.AdministradorEliminados" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="titulo" runat="server">
+    Eliminados
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
+    
+       <div class="btn-group" role="group" aria-label="Basic example">
+   <asp:Label ID="Eliminados" runat="server" Text="Eliminados: " Class ="alert-danger"></asp:Label>
+        
+        <asp:LinkButton ID="Ealbumes" class="btn btn-secondary"  runat="server" href="AdminAlbumesEliminados.aspx">Consulta los albumes actualmente eliminados </asp:LinkButton>
+       <asp:LinkButton ID="EArtista" class="btn btn-secondary"  runat="server" href="AdminArtistasEliminados.aspx">Artistas Eliminados</asp:LinkButton>
+
+
+      
+</div>
+    <div class="card-body">
+        <asp:ContentPlaceHolder ID="cuerpo" runat="server">
+
+
+        </asp:ContentPlaceHolder>
+        
+    </div>
+
+</asp:Content>

@@ -50,11 +50,14 @@
 
                             <div class="col-4 ">
                                 <ul class="navbar-nav mr-auto">
+                                    
                                     <li class="nav-item  mx-sm-3 mb-2 col-auto ">
                                         <a class=" btn btn-outline-info btn-block " href="../Home.aspx">Regresar a la Home </a>
                                     </li>
                                     <li class="nav-item mx-sm-3 mb-2  col-auto">
-                                        <a class="btn btn-outline-info btn-block" href="# ">Registrar Artista </a>
+                      
+                                        <asp:Button ID="registArtista" runat="server" Text="Registrar Artista"  class="btn btn-outline-info btn-block" OnClick="registArtista_Click" />
+                                     
                                     </li>
                                     <li class="nav-item  mx-sm-3 mb-2 col-auto">
                                         <a class="btn btn-outline-info btn-block" href="#">Nueva Lista</a>
@@ -62,8 +65,21 @@
                                     <li class="nav-item  mx-sm-3 mb-2 col-auto">
                                         <a class="btn btn-outline-info btn-block" href="#">Mis Listas </a>
                                     </li>
+                                      <li class="nav-item  mx-sm-3 mb-2 col-auto">
+                                          <asp:Button ID="btnFavoritos" runat="server" Text="Agregar Favoritos"    class="btn btn-outline-info btn-block" OnClick="btnFavoritos_Click" />
+                                        
+                                    </li>
+                                     <li class="nav-item  mx-sm-3 mb-2 col-auto">
+                                          <asp:Button ID="MisFavoritos" runat="server" Text="Mis Favoritos"    class="btn btn-outline-info btn-block" OnClick="MisFavoritos_Click"  />
+                                        
+                                    </li>
+                                      <li class="nav-item  mx-sm-3 mb-2 col-auto">
+                                        <a class="btn btn-outline-info btn-block" href="Novedades.aspx">Novedades </a>
+                                    </li>
+
                                     <li class="nav-item  mx-sm-3 mb-2 col-auto">
-                                        <a class="btn btn-outline-info btn-block" href="IniciarSesion.aspx">Cerrar Sesión </a>
+                                        <asp:Button ID="cerrarSesion" class="btn btn-outline-info btn-block" runat="server" Text="Cerrar Sesion" OnClick="cerrarSesion_Click" />
+                                     
                                     </li>
                                 </ul>
                                 </div>

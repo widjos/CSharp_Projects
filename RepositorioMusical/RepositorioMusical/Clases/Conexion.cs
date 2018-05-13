@@ -15,7 +15,8 @@ namespace RepositorioMusical.Clases
 
         public Conexion()
         {
-            DB_Nombre = " server=WINDOWS-RL87E9Q; database=RepositorioMusica ; Integrated security = true"; // Conexion de la base de datos   
+            DB_Nombre = "server=WINDOWS-RL87E9Q; database=RepositorioMusica ; Integrated security = true"; // Conexion de la base de datos   
+           // miConexion = new SqlConnection(DB_Nombre); //lo movi
         }
 
         // Metodo para abrir la conexion a la base de datos y comenzar a realizar consultas.

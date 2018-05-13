@@ -50,6 +50,12 @@
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack-Core.1.1.1\lib\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack-Shell.1.1.1\lib\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -68,6 +74,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AppData\nuevogen1.png" />
+    <Content Include="AppData\nuevogen2.jpg" />
+    <Content Include="AppData\nuevogen3.jpg" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -169,6 +178,24 @@
     <Content Include="Imagenes\5.jpg" />
     <Content Include="Imagenes\6.jpg" />
     <Content Include="Imagenes\7.jpg" />
+    <Content Include="Imagenes\Botones\favo.png" />
+    <Content Include="Imagenes\Botones\audio.png" />
+    <Content Include="Imagenes\Botones\megusta.png" />
+    <Content Include="Imagenes\Botones\eliminar.png" />
+    <Content Include="Imagenes\GneroImagenes\blues.jpg">
+      <BrowseToURL>~Imagenes/GneroImagenes/blues.jpg</BrowseToURL>
+    </Content>
+    <Content Include="Imagenes\GneroImagenes\clasica.jpg" />
+    <Content Include="Imagenes\GneroImagenes\dance.jpg" />
+    <Content Include="Imagenes\GneroImagenes\electronica.png" />
+    <Content Include="Imagenes\GneroImagenes\funk.jpg" />
+    <Content Include="Imagenes\GneroImagenes\hiphop.png" />
+    <Content Include="Imagenes\GneroImagenes\jazz.jpg" />
+    <Content Include="Imagenes\GneroImagenes\metal.jpg" />
+    <Content Include="Imagenes\GneroImagenes\pop.jpeg" />
+    <Content Include="Imagenes\GneroImagenes\rap.jpg" />
+    <Content Include="Imagenes\GneroImagenes\reggea.jpg" />
+    <Content Include="Imagenes\GneroImagenes\rock.jpg" />
     <Content Include="Imagenes\Portada 1.jpg" />
     <Content Include="Imagenes\Portada 2.jpg" />
     <Content Include="Imagenes\Portada 3.jpg" />
@@ -215,8 +242,40 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="UsuarioAdministrador\AdminActualizaUsuario.aspx" />
+    <Content Include="UsuarioAdministrador\AdminAgregarGenero.aspx" />
+    <Content Include="UsuarioAdministrador\AdminAlbumesEliminados.aspx" />
+    <Content Include="UsuarioAdministrador\AdminArtistasEliminados.aspx" />
+    <Content Include="UsuarioAdministrador\AdminCrearNovedades.aspx" />
+    <Content Include="UsuarioAdministrador\AdministradorInicio.aspx" />
+    <Content Include="UsuarioAdministrador\ActivarUsuario.aspx" />
+    <Content Include="UsuarioAdministrador\AdminRegistrarUsuario.aspx" />
+    <Content Include="UsuarioAdministrador\BloquearUsuario.aspx" />
+    <Content Include="UsuarioAdministrador\ConsultaArtistasActuales.aspx" />
+    <Content Include="UsuarioAdministrador\ConsultaUsuariosActuales.aspx" />
+    <Content Include="UsuarioAdministrador\EliminarUsuario.aspx" />
+    <Content Include="UsuarioAdministrador\Reportes.aspx" />
+    <Content Include="UsuarioArtista\AgregarAlbum.aspx" />
+    <Content Include="UsuarioArtista\Artista.aspx" />
+    <Content Include="UsuarioArtista\CancionesAlbum.aspx" />
+    <Content Include="UsuarioArtista\MisAlbumes.aspx" />
+    <Content Include="UsuarioArtista\MostrarMisAlbums.aspx" />
+    <Content Include="UsuarioConsulta\Favoritos.aspx" />
+    <Content Include="UsuarioConsulta\misFavoritos.aspx" />
+    <Content Include="UsuarioConsulta\MostrarAlbums.aspx" />
+    <Content Include="UsuarioConsulta\MostrarArtista.aspx" />
+    <Content Include="UsuarioConsulta\MostrarCanciones.aspx" />
+    <Content Include="UsuarioConsulta\MostrarGeneros.aspx" />
+    <Content Include="UsuarioConsulta\Novedades.aspx" />
+    <Content Include="UsuarioConsulta\RegistrarArtista.aspx" />
+    <Content Include="UsuarioConsulta\Tendencias.aspx" />
     <Content Include="UsuarioConsulta\Usuario.aspx" />
     <Content Include="UsuarioConsulta\Usuario.Master" />
+    <Content Include="UsuarioAdministrador\Administrador.Master" />
+    <Content Include="UsuarioAdministrador\AdministradorGestionUsuarios.master" />
+    <Content Include="UsuarioAdministrador\AdministradorConsultaUsuarios.master" />
+    <Content Include="UsuarioAdministrador\AdministradorEliminados.master" />
+    <Content Include="UsuarioArtista\ArtistaPrincipal.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -229,9 +288,16 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Album.cs" />
+    <Compile Include="Clases\botonAccion.cs" />
+    <Compile Include="Clases\Cancion.cs" />
     <Compile Include="Clases\Conexion.cs" />
     <Compile Include="Clases\Consultas.cs" />
     <Compile Include="Clases\Insercion.cs" />
+    <Compile Include="Clases\ListaCancion.cs" />
+    <Compile Include="Clases\ListaTexto.cs" />
+    <Compile Include="Clases\NodoCancion.cs" />
+    <Compile Include="Clases\NodoTexto.cs" />
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -261,6 +327,230 @@
     <Compile Include="Registrarse.aspx.designer.cs">
       <DependentUpon>Registrarse.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UsuarioAdministrador\AdminActualizaUsuario.aspx.cs">
+      <DependentUpon>AdminActualizaUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioAdministrador\AdminActualizaUsuario.aspx.designer.cs">
+      <DependentUpon>AdminActualizaUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioAdministrador\AdminAgregarGenero.aspx.cs">
+      <DependentUpon>AdminAgregarGenero.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioAdministrador\AdminAgregarGenero.aspx.designer.cs">
+      <DependentUpon>AdminAgregarGenero.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioAdministrador\AdminAlbumesEliminados.aspx.cs">
+      <DependentUpon>AdminAlbumesEliminados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioAdministrador\AdminAlbumesEliminados.aspx.designer.cs">
+      <DependentUpon>AdminAlbumesEliminados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioAdministrador\AdminArtistasEliminados.aspx.cs">
+      <DependentUpon>AdminArtistasEliminados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioAdministrador\AdminArtistasEliminados.aspx.designer.cs">
+      <DependentUpon>AdminArtistasEliminados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioAdministrador\AdminCrearNovedades.aspx.cs">
+      <DependentUpon>AdminCrearNovedades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioAdministrador\AdminCrearNovedades.aspx.designer.cs">
+      <DependentUpon>AdminCrearNovedades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioAdministrador\AdministradorConsultaUsuarios.master.cs">
+      <DependentUpon>AdministradorConsultaUsuarios.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioAdministrador\AdministradorConsultaUsuarios.master.designer.cs">
+      <DependentUpon>AdministradorConsultaUsuarios.master</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioAdministrador\AdministradorEliminados.master.cs">
+      <DependentUpon>AdministradorEliminados.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioAdministrador\AdministradorEliminados.master.designer.cs">
+      <DependentUpon>AdministradorEliminados.master</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioAdministrador\AdministradorGestionUsuarios.master.cs">
+      <DependentUpon>AdministradorGestionUsuarios.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioAdministrador\AdministradorGestionUsuarios.master.designer.cs">
+      <DependentUpon>AdministradorGestionUsuarios.master</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioAdministrador\AdministradorInicio.aspx.cs">
+      <DependentUpon>AdministradorInicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioAdministrador\AdministradorInicio.aspx.designer.cs">
+      <DependentUpon>AdministradorInicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioAdministrador\Administrador.Master.cs">
+      <DependentUpon>Administrador.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioAdministrador\Administrador.Master.designer.cs">
+      <DependentUpon>Administrador.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioAdministrador\ActivarUsuario.aspx.cs">
+      <DependentUpon>ActivarUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioAdministrador\ActivarUsuario.aspx.designer.cs">
+      <DependentUpon>ActivarUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioAdministrador\AdminRegistrarUsuario.aspx.cs">
+      <DependentUpon>AdminRegistrarUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioAdministrador\AdminRegistrarUsuario.aspx.designer.cs">
+      <DependentUpon>AdminRegistrarUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioAdministrador\BloquearUsuario.aspx.cs">
+      <DependentUpon>BloquearUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioAdministrador\BloquearUsuario.aspx.designer.cs">
+      <DependentUpon>BloquearUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioAdministrador\ConsultaArtistasActuales.aspx.cs">
+      <DependentUpon>ConsultaArtistasActuales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioAdministrador\ConsultaArtistasActuales.aspx.designer.cs">
+      <DependentUpon>ConsultaArtistasActuales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioAdministrador\ConsultaUsuariosActuales.aspx.cs">
+      <DependentUpon>ConsultaUsuariosActuales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioAdministrador\ConsultaUsuariosActuales.aspx.designer.cs">
+      <DependentUpon>ConsultaUsuariosActuales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioAdministrador\EliminarUsuario.aspx.cs">
+      <DependentUpon>EliminarUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioAdministrador\EliminarUsuario.aspx.designer.cs">
+      <DependentUpon>EliminarUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioAdministrador\Reportes.aspx.cs">
+      <DependentUpon>Reportes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioAdministrador\Reportes.aspx.designer.cs">
+      <DependentUpon>Reportes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioArtista\AgregarAlbum.aspx.cs">
+      <DependentUpon>AgregarAlbum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioArtista\AgregarAlbum.aspx.designer.cs">
+      <DependentUpon>AgregarAlbum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioArtista\Artista.aspx.cs">
+      <DependentUpon>Artista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioArtista\Artista.aspx.designer.cs">
+      <DependentUpon>Artista.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioArtista\ArtistaPrincipal.Master.cs">
+      <DependentUpon>ArtistaPrincipal.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioArtista\ArtistaPrincipal.Master.designer.cs">
+      <DependentUpon>ArtistaPrincipal.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioArtista\CancionesAlbum.aspx.cs">
+      <DependentUpon>CancionesAlbum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioArtista\CancionesAlbum.aspx.designer.cs">
+      <DependentUpon>CancionesAlbum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioArtista\MisAlbumes.aspx.cs">
+      <DependentUpon>MisAlbumes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioArtista\MisAlbumes.aspx.designer.cs">
+      <DependentUpon>MisAlbumes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioArtista\MostrarMisAlbums.aspx.cs">
+      <DependentUpon>MostrarMisAlbums.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioArtista\MostrarMisAlbums.aspx.designer.cs">
+      <DependentUpon>MostrarMisAlbums.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioConsulta\Favoritos.aspx.cs">
+      <DependentUpon>Favoritos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioConsulta\Favoritos.aspx.designer.cs">
+      <DependentUpon>Favoritos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioConsulta\misFavoritos.aspx.cs">
+      <DependentUpon>misFavoritos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioConsulta\misFavoritos.aspx.designer.cs">
+      <DependentUpon>misFavoritos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioConsulta\MostrarAlbums.aspx.cs">
+      <DependentUpon>MostrarAlbums.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioConsulta\MostrarAlbums.aspx.designer.cs">
+      <DependentUpon>MostrarAlbums.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioConsulta\MostrarArtista.aspx.cs">
+      <DependentUpon>MostrarArtista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioConsulta\MostrarArtista.aspx.designer.cs">
+      <DependentUpon>MostrarArtista.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioConsulta\MostrarCanciones.aspx.cs">
+      <DependentUpon>MostrarCanciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioConsulta\MostrarCanciones.aspx.designer.cs">
+      <DependentUpon>MostrarCanciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioConsulta\MostrarGeneros.aspx.cs">
+      <DependentUpon>MostrarGeneros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioConsulta\MostrarGeneros.aspx.designer.cs">
+      <DependentUpon>MostrarGeneros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioConsulta\Novedades.aspx.cs">
+      <DependentUpon>Novedades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioConsulta\Novedades.aspx.designer.cs">
+      <DependentUpon>Novedades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioConsulta\RegistrarArtista.aspx.cs">
+      <DependentUpon>RegistrarArtista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioConsulta\RegistrarArtista.aspx.designer.cs">
+      <DependentUpon>RegistrarArtista.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioConsulta\Tendencias.aspx.cs">
+      <DependentUpon>Tendencias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsuarioConsulta\Tendencias.aspx.designer.cs">
+      <DependentUpon>Tendencias.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UsuarioConsulta\Usuario.aspx.cs">
       <DependentUpon>Usuario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -277,6 +567,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="AppDataMusica\" />
+    <Folder Include="AppData\Novedades\" />
     <Folder Include="Forms\" />
   </ItemGroup>
   <ItemGroup>

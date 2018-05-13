@@ -58,7 +58,9 @@
         
   <div class="form-group mx-sm-3 mb-2">
     <label for="Correo" class="sr-only">Correo</label>
-    <input type="email" class="form-control" id="Correo" placeholder="Correo Electronico">
+
+      <asp:TextBox ID="Correo" runat="server" class="form-control " placeholder="Correo Electronico"></asp:TextBox>
+        <asp:Label ID="errorCorreo" runat="server" class="sr-only espacio-vertical" Text="casa"></asp:Label>
   </div>
   
         </div>
@@ -68,19 +70,26 @@
 
   <div class="form-group mx-sm-3 mb-2">
     <label for="contraseña" class="sr-only">Contraseña</label>
-    <input type="password" class="form-control" id="contraseña" placeholder="Contraseña">
+      <asp:TextBox ID="contrasena" runat="server"  placeholder="Contraseña"  class="form-control" TextMode="Password"></asp:TextBox>
+      <asp:Label ID="ErrorContra" runat="server" class="sr-only espacio-vertical "  Text="casa">casa</asp:Label>
+   
   </div>
+              <div class="col-xs-11">
+             <asp:Button ID="IngresarUser" Class="btn btn-primary mb-2" runat="server" Text="Ingresar" OnClick="IngresarUser_Click" />
+                </div>
              <asp:HyperLink ID="CrearCuenta" href="Registrarse.aspx" runat="server">No tienes una cuenta</asp:HyperLink>
-  <button type="submit" class="btn btn-primary mb-2">Confirmar</button>
-
+             
+             
         </div>
          
     </form>
                <div class="col-xs-11">
                         <asp:LinkButton ID="RecuperarContrasena" runat="server" href="RecuperarContrasena.aspx">Olvidaste tu contraseña</asp:LinkButton>
+                   
                         </div> 
-
-
+                <div class="col-xs-11">
+                <asp:Label ID="error" runat="server" Text=""></asp:Label>
+                    </div> 
 </div>
     </form>
     

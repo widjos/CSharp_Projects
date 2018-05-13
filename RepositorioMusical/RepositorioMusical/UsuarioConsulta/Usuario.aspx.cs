@@ -11,7 +11,7 @@ namespace RepositorioMusical.UsuarioConsulta
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Response.Write("Bienvenido : " + User.Identity.Name + "" + "Tipo de Autentificacion Usada: " + Session["Codigo_Usuario"] + "");
         }
     }
 }

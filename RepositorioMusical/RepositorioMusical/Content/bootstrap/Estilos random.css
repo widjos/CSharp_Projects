@@ -23,3 +23,26 @@
 
 
 }
+
+
+.centrarbox {
+    margin: 25px, 150px 25px 160px;
+    padding :  25px;
+
+
+}
+
+.ubicaraladerecha {
+    padding-left: 100px;
+
+}
+
+.anchura-mas {
+width : 350px;
+
+}
+
+.espacio-derecha {
+padding-right: 150px;
+
+}

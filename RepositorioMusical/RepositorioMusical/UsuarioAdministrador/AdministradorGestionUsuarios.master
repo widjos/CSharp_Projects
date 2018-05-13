@@ -1,0 +1,26 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/UsuarioAdministrador/Administrador.Master" AutoEventWireup="true" CodeBehind="AdministradorGestionUsuarios.master.cs" Inherits="RepositorioMusical.UsuarioAdministrador.AdministradorGestionUsuarios" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="titulo" runat="server">
+    Gestion Usuarios
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
+     
+   <div class="btn-group" role="group" aria-label="Basic example">
+   <asp:Label ID="Gestion" runat="server" Text="Gestion de Usuarios: " CssClass ="alert-danger"></asp:Label>
+        
+        <asp:LinkButton ID="crearUser" class="btn btn-secondary"  runat="server" href="AdminRegistrarUsuario.aspx">Crear Usuario</asp:LinkButton>    
+       <asp:LinkButton ID="modificarUser" class="btn btn-secondary"  runat="server" href="#">Modificar Usuario</asp:LinkButton>
+       <asp:LinkButton ID="nuevogenero" class="btn btn-secondary"  runat="server" href="AdminAgregarGenero.aspx">Registro nuevo genero </asp:LinkButton>
+       <asp:LinkButton ID="activarUser" class="btn btn-secondary" runat="server" href="ActivarUsuario.aspx">Activar</asp:LinkButton>
+       <asp:LinkButton ID="bloquerUser"  class="btn btn-secondary" runat="server" href="BloquearUsuario.aspx">Bloquer</asp:LinkButton>
+       <asp:LinkButton ID="eliminiarUser" class="btn btn-secondary"  runat="server" href="EliminarUsuario.aspx">Eliminar</asp:LinkButton>
+      
+</div>
+    <asp:ContentPlaceHolder ID="body2" runat="server">
+
+
+    </asp:ContentPlaceHolder>
+
+
+</asp:Content>

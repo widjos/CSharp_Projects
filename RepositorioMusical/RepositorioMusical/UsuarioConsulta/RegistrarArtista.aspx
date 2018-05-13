@@ -9,9 +9,14 @@
     
     <!--Registrarse -->
 
-                <div class="centrar-pagina">
+    <div class="card-header-tabs">
+          <h5 class="col-xl-12">Ingrese los datos que se le piden acontinuacion para crear el artista asociado a su cuenta.</h5>
 
-                    <h5 class="col-xl-12">Ingrese los datos que se le piden acontinuacion.</h5>
+    </div>          
+    
+    <div class="centrar-pagina">
+
+                  
                     <label class="col-xs-11">Nombre</label>
                     <div class="col-xl-11">
                         <asp:TextBox ID="Nombre" runat="server" class="form-control" placeholder="Nombre"></asp:TextBox>
@@ -24,10 +29,25 @@
                     <div class="col-xs-11">
                     <asp:dropdownlist ID="Pais" class="form-control" runat="server"></asp:dropdownlist>
                      </div>
+                    <label class="col-xs-11">Genero</label>
+                    <div class="col-xs-11">
+                    <asp:dropDownList ID="Genero" Class="form-control" runat="server" selectionMode="Multiple"></asp:dropDownList>
+                        <asp:CheckBoxList ID="Genero2" runat="server" class="form-control"></asp:CheckBoxList>
+
+                    </div>
                     <label class="col-xl-11">Descripcion del Artista</label>
                     <div class="col-11">
-                        <asp:TextBox ID="Descripcion" runat="server" class="form-control" placeholder="Hablenos de usted"></asp:TextBox>
+                        <asp:TextBox ID="Descripcion" TextMode="MultiLine" Columns="50" Rows="5" runat="server" class="form-control" placeholder="Hablenos de usted" Height="145px"></asp:TextBox>
+ 
                     </div>
+
+                    <div class="col-xs-11 espacio-vertical">
+                     <div class="card" style="width: 18rem;">
+                    <asp:Image  class="card-img" ID="fotoselecionada" runat="server" />
+                      <asp:FileUpload ID="imagenArtista" runat="server" class="form-control" />
+                     </div>
+                         </div>
+
                     <label class="col-xl-11">Facebook</label>
                     <div class="col-11">
                         <asp:TextBox ID="FB" runat="server" class="form-control" placeholder="Ingrese su Facebook"></asp:TextBox>

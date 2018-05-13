@@ -34,33 +34,45 @@
 
 
                 <div class="collapse" id="navbarToggleExternalContent">
-                    <div class="bg-dark p-4">
+                    <div class="bg-warning p-4">
 
                         <div class="row">
                             <div class="col-8">
-                                <h4 class="text-white">Bienvenido Usuario</h4>
+                                <h4 class="text-white">Bienvenido Administrador</h4>
                                 <span class="text-muted">Wiplay Te da la Bienvenida al repositorio askjdahkjsdhakjshdkajsdhkajsdhkajsdhakjsdhkajsd
                                     kjashdkajsdhkajsdhkajsdkjasdhkajsdhkajsdhkajsdhkajsdhkajsdhkajsdhkajshdkajskakasjdjs. </span>
+                                <asp:Button ID="LOGOut" runat="server" Text="Cerrar Sesion"  Class="btn btn-outline-danger btn-block espacio-vertical"  OnClick="LOGOut_Click"/>
+                            
                             </div>
+                          
 
                             <div class="col-4 ">
                                 <ul class="navbar-nav mr-auto">
                                     <li class="nav-item  mx-sm-3 mb-2 col-auto ">
-                                        <a class=" btn btn-outline-info btn-block " href="../Home.aspx">Regresar a la Home </a>
+                                        <a class="btn btn-outline-danger btn-block " href="AdministradorInicio.aspx">Regresar a la Home </a>
                                     </li>
                                     <li class="nav-item mx-sm-3 mb-2  col-auto">
-                                        <asp:Button ID="RegistraArtista" runat="server" Text="Registrar Artista" class="btn btn-outline-info btn-block" href="#" />
+                                        <a class="btn btn-outline-danger btn-block" href="ActivarUsuario.aspx">Gestionar Usuarios</a>
+                                 
                                        <!-- <a class="btn btn-outline-info btn-block" href="# ">Registrar Artista </a> -->
                                     </li>
                                     <li class="nav-item  mx-sm-3 mb-2 col-auto">
-                                        <a class="btn btn-outline-info btn-block" href="#">Nueva Lista</a>
+                                        <a class="btn btn-outline-danger btn-block" href="ConsultaUsuariosActuales.aspx">Consulta de Usuarios</a>
                                     </li>
                                     <li class="nav-item  mx-sm-3 mb-2 col-auto">
-                                        <a class="btn btn-outline-info btn-block" href="#">Mis Listas </a>
+                                        <a class="btn btn-outline-danger btn-block" href="AdminAgregarGenero.aspx">Registra Genero Musical</a>
                                     </li>
+                                     <li class="nav-item  mx-sm-3 mb-2 col-auto">
+                                        <a class="btn btn-outline-danger btn-block" href="AdminCrearNovedades.aspx">Registro Novedades </a>
+                                    </li>
+                                       <li class="nav-item  mx-sm-3 mb-2 col-auto">
+                                        <a class="btn btn-outline-danger btn-block" href="Reportes.aspx">Reportes </a>
+                                    </li>
+                                    
                                     <li class="nav-item  mx-sm-3 mb-2 col-auto">
-                                        <a class="btn btn-outline-info btn-block" href="IniciarSesion.aspx">Cerrar Sesión </a>
+                                        <a class="btn btn-outline-danger btn-block" href="AdminArtistasEliminados.aspx">Eliminados </a>
                                     </li>
+                                     
                                 </ul>
                                 </div>
                             </div>
@@ -73,7 +85,7 @@
 
 
 
-            <asp:ContentPlaceHolder ID="Body" runat="server">
+            <asp:ContentPlaceHolder ID="body" runat="server">
             </asp:ContentPlaceHolder>
         </div>
     </form>

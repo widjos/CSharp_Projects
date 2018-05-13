@@ -55,3 +55,7 @@ C:\Users\Wid\source\repos\RepositorioMusical\RepositorioMusical\obj\Debug\Reposi
 C:\Users\Wid\source\repos\RepositorioMusical\RepositorioMusical\obj\Debug\RepositorioMusical.csproj.CoreCompileInputs.cache
 C:\Users\Wid\source\repos\RepositorioMusical\RepositorioMusical\obj\Debug\RepositorioMusical.dll
 C:\Users\Wid\source\repos\RepositorioMusical\RepositorioMusical\obj\Debug\RepositorioMusical.pdb
+C:\Users\Wid\source\repos\RepositorioMusical\RepositorioMusical\bin\Microsoft.WindowsAPICodePack.dll
+C:\Users\Wid\source\repos\RepositorioMusical\RepositorioMusical\bin\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\Wid\source\repos\RepositorioMusical\RepositorioMusical\bin\Microsoft.WindowsAPICodePack.xml
+C:\Users\Wid\source\repos\RepositorioMusical\RepositorioMusical\bin\Microsoft.WindowsAPICodePack.Shell.xml

@@ -73,6 +73,9 @@
                         <p>Explora a los artistas del momento con el ritmo de una melodica cancion.</p>
                     </div>
                 </div>
+               
+                
+     
                 <div class="carousel-item">
                     <img class="d-block w-75 " src="Imagenes/Portada%202.jpg" alt="Second slide">
                     <div class="carousel-caption d-none d-md-block">

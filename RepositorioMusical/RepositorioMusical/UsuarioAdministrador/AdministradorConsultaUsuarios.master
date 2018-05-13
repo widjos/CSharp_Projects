@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/UsuarioAdministrador/Administrador.Master" AutoEventWireup="true" CodeBehind="AdministradorConsultaUsuarios.master.cs" Inherits="RepositorioMusical.UsuarioAdministrador.AdministradorConsultaUsuarios" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="titulo" runat="server">
+    Consulta de Usuarios
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
+      <div class="btn-group" role="group" aria-label="Basic example">
+   <asp:Label ID="Consulta" runat="server" Text="Consultas: " CssClass ="alert-danger"></asp:Label>
+        
+        <asp:LinkButton ID="CUsuarios" class="btn btn-secondary"  runat="server" href="ConsultaUsuariosActuales.aspx">Consulta de Usuarios actuales </asp:LinkButton>
+       <asp:LinkButton ID="CArtistas" class="btn btn-secondary"  runat="server" href="ConsultaArtistasActuales.aspx">Artistas</asp:LinkButton>
+      <asp:LinkButton ID="Clistas" class="btn btn-secondary"  runat="server" href="#">Listas de Reproduccion</asp:LinkButton>
+          <asp:LinkButton ID="Cgeneros" class="btn btn-secondary"  runat="server" href="#">Generos</asp:LinkButton>
+          <asp:LinkButton ID="Ctendencias" class="btn btn-secondary"  runat="server" href="#">Tendencias</asp:LinkButton>
+
+      
+</div>
+
+    <asp:ContentPlaceHolder ID="body2" runat="server">
+
+
+    </asp:ContentPlaceHolder>
+
+
+</asp:Content>

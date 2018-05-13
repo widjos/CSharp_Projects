@@ -13,5 +13,17 @@ namespace RepositorioMusical.UsuarioAdministrador
         {
 
         }
+
+        protected void LOGOut_Click(object sender, EventArgs e)
+        {
+            CerrarSesion();
+        }
+
+        public void CerrarSesion()
+        {
+            Session.Abandon();
+            Response.Cookies.Add(new HttpCookie("ASP.NET_SessionId", ""));
+            Response.Redirect("../Home.aspx");
+        }
     }
 }

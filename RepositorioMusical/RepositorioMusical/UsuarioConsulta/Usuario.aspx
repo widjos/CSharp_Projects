@@ -26,7 +26,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Genero</h5>
                         <p class="card-text">Explora con fasilidad todos en los generos alternativos que suenan en el momento para encontrar nuevas canciones.</p>
-                        <a href="#" class="btn btn-primary">Ingresar</a>
+                        <a href="MostrarGeneros.aspx" class="btn btn-primary">Ingresar</a>
                     </div>
                 </div>
             </div>
@@ -60,9 +60,9 @@
                 <div class="card" style="width: 18rem;">
                     <img class="card-img-top" src="../Imagenes/5.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">Artistas más Influyentes</h5>
+                        <h5 class="card-title">Tendencias</h5>
                         <p class="card-text">Explora con fasilidad todos en los generos alternativos que suenan en el momento para encontrar nuevas canciones.</p>
-                        <a href="#" class="btn btn-primary">Ingresar</a>
+                        <a href="Tendencias.aspx" class="btn btn-primary">Ingresar</a>
                     </div>
                 </div>
             </div>
